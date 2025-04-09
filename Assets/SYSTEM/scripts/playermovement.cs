@@ -44,19 +44,32 @@ public class playermovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            pos.x -= 0.03f;
+            pos.x -= 0.01f;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            pos.y += 0.03f;
+            pos.y += 0.01f;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            pos.y -= 0.03f;
+            pos.y -= 0.01f;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            pos.x += 0.03f;
+            pos.x += 0.01f;
+        }
+
+        if (pos.x >= 6.36f)
+        {
+            pos.x = 6.35f;
+        }
+        if (pos.x <= -6.36f)
+        {
+            pos.x = -6.35f;
+        }
+        if (pos.y <= -4.47f)
+        {
+            pos.y = -4.46f;
         }
     }
 
