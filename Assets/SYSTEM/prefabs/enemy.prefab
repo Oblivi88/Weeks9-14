@@ -99,3 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   speed: 0.75
+  HP: 3
+  bullet: {fileID: 3056575917851054850, guid: d4f5561285a7f2e47bfa5464a065ec5b, type: 3}
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  orange: {r: 1, g: 0.59284186, b: 0, a: 1}
