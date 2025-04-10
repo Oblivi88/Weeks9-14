@@ -14,8 +14,6 @@ public class playermovement : MonoBehaviour
 
     public GameObject enemy;
 
-    public UnityEvent playerReachesTop;
-
     SpriteRenderer sr;
 
     Vector2 pos = new Vector2(0, -3.5f);
@@ -50,19 +48,19 @@ public class playermovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            pos.x -= 0.02f;
+            pos.x -= 0.01f;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            pos.y += 0.02f;
+            pos.y += 0.01f;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            pos.y -= 0.02f;
+            pos.y -= 0.01f;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            pos.x += 0.02f;
+            pos.x += 0.01f;
         }
 
         if (pos.x >= 6.36f)
@@ -84,12 +82,10 @@ public class playermovement : MonoBehaviour
         }
     }
 
-
-   //public void Die()
-    //{
-    //    gameObject.SetActive(false);
-    //}
-
-
+    public void ResetPos()
+    {
+        pos.x = 0;
+        pos.y = -3.5f;
+    }
 }
         

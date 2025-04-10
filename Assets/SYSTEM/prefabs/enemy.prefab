@@ -115,7 +115,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  PlayerDies:
-    m_PersistentCalls:
-      m_Calls: []
   orange: {r: 1, g: 0.59284186, b: 0, a: 1}
