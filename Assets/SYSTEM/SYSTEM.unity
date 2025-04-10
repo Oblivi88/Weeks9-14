@@ -1218,7 +1218,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2123424538}
   - component: {fileID: 2123424537}
-  - component: {fileID: 2123424536}
   - component: {fileID: 2123424535}
   m_Layer: 0
   m_Name: player
@@ -1243,27 +1242,22 @@ MonoBehaviour:
   walkingRight: {fileID: -2145174218, guid: a946e533d1f70a8448966358d94784e7, type: 3}
   walkingUp: {fileID: 368908602, guid: a946e533d1f70a8448966358d94784e7, type: 3}
   walkingDown: {fileID: 1511432028, guid: a946e533d1f70a8448966358d94784e7, type: 3}
---- !u!95 &2123424536
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123424534}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6a71d2b3e04f429468ff459738c1c99c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  enemy: {fileID: 30610840719973513, guid: cfae2086e8427bf459272d4601662279, type: 3}
+  playerReachesTop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3707670928436095336, guid: cfae2086e8427bf459272d4601662279, type: 3}
+        m_TargetAssemblyTypeName: Enemies, Assembly-CSharp
+        m_MethodName: DestroyAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!212 &2123424537
 SpriteRenderer:
   m_ObjectHideFlags: 0

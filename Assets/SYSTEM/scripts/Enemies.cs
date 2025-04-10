@@ -10,7 +10,7 @@ public class Enemies : MonoBehaviour
     public int HP = 3;
     public GameObject bullet;
 
-    public UnityEvent OnClick;
+    public UnityEvent EnemyDies;
 
     SpriteRenderer sr;
 
@@ -32,7 +32,7 @@ public class Enemies : MonoBehaviour
         transform.up = direction;
         transform.position += transform.up * speed * Time.deltaTime;
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             if (sr.bounds.Contains(mousePos))
             {
@@ -48,6 +48,7 @@ public class Enemies : MonoBehaviour
                 if (HP == 0)
                 {
                     Destroy(gameObject);
+                    EnemyDies.Invoke();
                 }
             } 
         }
@@ -55,4 +56,6 @@ public class Enemies : MonoBehaviour
 
 
     }
+
+    
 }

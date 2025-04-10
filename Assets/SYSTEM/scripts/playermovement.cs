@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class playermovement : MonoBehaviour
 {
@@ -9,6 +11,10 @@ public class playermovement : MonoBehaviour
     public Sprite walkingRight;
     public Sprite walkingUp;
     public Sprite walkingDown;
+
+    public GameObject enemy;
+
+    public UnityEvent playerReachesTop;
 
     SpriteRenderer sr;
 
@@ -44,19 +50,19 @@ public class playermovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            pos.x -= 0.01f;
+            pos.x -= 0.03f;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            pos.y += 0.01f;
+            pos.y += 0.03f;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            pos.y -= 0.01f;
+            pos.y -= 0.03f;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            pos.x += 0.01f;
+            pos.x += 0.03f;
         }
 
         if (pos.x >= 6.36f)
@@ -71,7 +77,15 @@ public class playermovement : MonoBehaviour
         {
             pos.y = -4.46f;
         }
+
+        if (pos.y >= 4.42f)
+        {
+            pos.y = 4.41f;
+        }
     }
 
-    }
+   
+
+
+}
         
