@@ -8,9 +8,9 @@ public class Enemies : MonoBehaviour
     public GameObject player;
     public float speed = 0.75f;
     public int HP = 3;
-    public GameObject bullet;
 
     public UnityEvent EnemyDies;
+    public UnityEvent PlayerDies;
 
     SpriteRenderer sr;
 
@@ -52,6 +52,11 @@ public class Enemies : MonoBehaviour
                 }
             } 
         }
+
+        //if (playerPosition.x >= transform.position.x - 0.3f && playerPosition.x <= transform.position.x + 0.3f && playerPosition.y >= transform.position.y - 0.3f && playerPosition.y <= transform.position.y + 0.3f)
+        //{
+        //    PlayerDies.Invoke();
+        //}
 
 
 

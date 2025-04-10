@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 30610840719973513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.900332, y: -0.4482419, z: 0}
+  m_LocalPosition: {x: 0.05, y: 3.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -100,7 +100,6 @@ MonoBehaviour:
   player: {fileID: 0}
   speed: 0.75
   HP: 3
-  bullet: {fileID: 3056575917851054850, guid: d4f5561285a7f2e47bfa5464a065ec5b, type: 3}
   EnemyDies:
     m_PersistentCalls:
       m_Calls:
@@ -116,4 +115,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  PlayerDies:
+    m_PersistentCalls:
+      m_Calls: []
   orange: {r: 1, g: 0.59284186, b: 0, a: 1}

@@ -50,19 +50,19 @@ public class playermovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            pos.x -= 0.03f;
+            pos.x -= 0.02f;
         }
         if (Input.GetKey(KeyCode.W))
         {
-            pos.y += 0.03f;
+            pos.y += 0.02f;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            pos.y -= 0.03f;
+            pos.y -= 0.02f;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            pos.x += 0.03f;
+            pos.x += 0.02f;
         }
 
         if (pos.x >= 6.36f)
@@ -84,7 +84,11 @@ public class playermovement : MonoBehaviour
         }
     }
 
-   
+
+   //public void Die()
+    //{
+    //    gameObject.SetActive(false);
+    //}
 
 
 }
