@@ -7,26 +7,27 @@ using UnityEngine.Events;
 public class playermovement : MonoBehaviour
 {
 
-    public Sprite walkingLeft;
+    public Sprite walkingLeft; // references to the four directional sprites
     public Sprite walkingRight;
     public Sprite walkingUp;
     public Sprite walkingDown;
 
-    public GameObject enemy;
+    public GameObject enemy; // reference to the enemies
 
     SpriteRenderer sr;
 
-    Vector2 pos = new Vector2(0, -3.5f);
+    Vector2 pos = new Vector2(0, -3.5f); // default starting position
 
     // Start is called before the first frame update
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponent<SpriteRenderer>(); // get spriterenderer component
     }
 
     // Update is called once per frame
     void Update()
     {
+        // movement code - when a key is pressed, show that sprite and change x or y value
         transform.position = pos;
 
         if (Input.GetKeyDown(KeyCode.A))
@@ -62,7 +63,7 @@ public class playermovement : MonoBehaviour
         {
             pos.x += 0.01f;
         }
-
+        // out of bounds code - if a player approaches the walls, push back
         if (pos.x >= 6.36f)
         {
             pos.x = 6.35f;
@@ -82,7 +83,7 @@ public class playermovement : MonoBehaviour
         }
     }
 
-    public void ResetPos()
+    public void ResetPos() // called when play again button is clicked, will reset player back to default starting pos
     {
         pos.x = 0;
         pos.y = -3.5f;

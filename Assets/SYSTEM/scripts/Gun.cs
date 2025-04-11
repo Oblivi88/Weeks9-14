@@ -20,7 +20,7 @@ public class Gun : MonoBehaviour
         Vector2 direction = mousePosition - (Vector2)transform.position;
         transform.up = direction;
 
-
+        // will always rotate based on mouse position
         
     }
 
